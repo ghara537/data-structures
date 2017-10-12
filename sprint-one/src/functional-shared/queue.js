@@ -29,8 +29,6 @@ var queueMethods = {};
 
 queueMethods.enqueue = function(value) {
   this.storage[this.size()] = value;
-  console.log('this:', this);
-  console.log('storage:', this.storage);
 };
 
 queueMethods.dequeue = function () {

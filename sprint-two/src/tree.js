@@ -15,13 +15,12 @@ var Tree = function(value) {
 };
 
 var treeMethods = {};
-
+// Big-O-->O(1)
 treeMethods.addChild = function(value) {
   var newChild = Tree(value);
   this.children.push(newChild);
 };
-
-
+// Big-O-->O(n)
 treeMethods.contains = function(target, currentTree) {
   var currentTree = currentTree || this;
   if (currentTree.value === target) {
@@ -35,8 +34,6 @@ treeMethods.contains = function(target, currentTree) {
     return false;
   }
 };
-
-
 
 /*
  * Complexity: What is the time complexity of the above functions?

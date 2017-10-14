@@ -15,6 +15,7 @@ var treeNode = function(value) {
   this.rightCount = 0;
 };
 
+// Big-O-->O(logn)
 treeNode.prototype.insert = function (value, parent) {
   
   //console.log('first tree root:', this);
@@ -44,6 +45,7 @@ treeNode.prototype.insert = function (value, parent) {
   }
 };
 
+// Big-O-->O(logn)
 treeNode.prototype.contains = function (value, parent) {
   var parent = parent ? parent : this;
   if ( parent.value === value) {
@@ -56,7 +58,7 @@ treeNode.prototype.contains = function (value, parent) {
     return false;
   }
 };
-
+// Big-O-->O(n)
 treeNode.prototype.depthFirstLog = function (cb, parent) {
   var parent = parent ? parent : this;
   parent.value = cb(parent.value);

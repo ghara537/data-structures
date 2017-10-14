@@ -2,33 +2,30 @@ var LinkedList = function() {
   var list = {};
   list.head = null;
   list.tail = null;
-
+  // Big-O-->O(1)
   list.addToTail = function(value) {
     var newNode = Node(value);
     if (list.tail === null) {
 //****
       list.tail = newNode;
-      list.head = newNode;
-      
+      list.head = newNode;      
     } else {
       list.tail.next = newNode;
       list.tail = newNode;
-      
     }
   };
-
+ // Big-O-->O(1)
   list.removeHead = function() {
   //returns the removed value
     if (list.head === null) {
       return null;
-
     } else {
       var headVal = list.head.value;
       list.head = list.head.next;
       return headVal;
     }
   };
-
+ // Big-O-->O(n)
   list.contains = function(target) {
   //returns boolean value
     var checkNode = list.head;
@@ -43,14 +40,12 @@ var LinkedList = function() {
       return true;
     }
     return false;
-  };
-   
+  };   
   return list;
 };
 
 var Node = function(value) {
   var node = {};
-
   node.value = value;
   node.next = null;
 

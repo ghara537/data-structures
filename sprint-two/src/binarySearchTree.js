@@ -1,7 +1,7 @@
 var BinarySearchTree = function(value) {
   
   var treeRoot = new treeNode(value);
-  console.log('treeRoot in bst:', JSON.stringify(treeRoot));
+  //console.log('treeRoot in bst:', JSON.stringify(treeRoot));
   return treeRoot;
 
 };
@@ -17,13 +17,13 @@ var treeNode = function(value) {
 
 treeNode.prototype.insert = function (value, parent) {
   
-  console.log('first tree root:', this);
+  //console.log('first tree root:', this);
   var parent = parent ? parent : this;
-  console.log('insert check:', parent.value);
+  //console.log('insert check:', parent.value);
   if (!parent.value) {
   
     parent.value = value;
-    console.log('value of parent:', parent.value);
+    //console.log('value of parent:', parent.value);
   } else {
     var parent = parent ? parent : this.treeRoot;
     if ( value < parent.value) {
